@@ -1,0 +1,632 @@
+{
+  "general": [
+    {
+      "question": "What is the capital of France?",
+      "options": ["Berlin", "Madrid", "Paris", "Lisbon"],
+      "answer": "Paris"
+    },
+    {
+      "question": "Which planet is known as the Red Planet?",
+      "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+      "answer": "Mars"
+    },
+    {
+      "question": "What is 2 + 2?",
+      "options": ["3", "4", "5", "6"],
+      "answer": "4"
+    },
+    {
+      "question": "What is the largest mammal in the world?",
+      "options": ["Elephant", "Blue Whale", "Giraffe", "Great White Shark"],
+      "answer": "Blue Whale"
+    },
+    {
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "options": ["China", "Japan", "Korea", "Thailand"],
+      "answer": "Japan"
+    },
+    {
+      "question": "Who wrote 'Romeo and Juliet'?",
+      "options": ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"],
+      "answer": "William Shakespeare"
+    },
+    {
+      "question": "What is the smallest continent?",
+      "options": ["Africa", "Antarctica", "Australia", "Europe"],
+      "answer": "Australia"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "options": ["Vincent Van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+      "answer": "Leonardo da Vinci"
+    },
+    {
+      "question": "What is the hardest natural substance on Earth?",
+      "options": ["Gold", "Diamond", "Iron", "Platinum"],
+      "answer": "Diamond"
+    },
+    {
+      "question": "What is the chemical symbol for water?",
+      "options": ["HO", "H2O", "O2H", "H2O2"],
+      "answer": "H2O"
+    },
+    {
+      "question": "How many continents are there?",
+      "options": ["5", "6", "7", "8"],
+      "answer": "7"
+    },
+    {
+      "question": "What is the main language spoken in Brazil?",
+      "options": ["Spanish", "Portuguese", "French", "English"],
+      "answer": "Portuguese"
+    },
+    {
+      "question": "What is the currency of Japan?",
+      "options": ["Yen", "Won", "Dollar", "Euro"],
+      "answer": "Yen"
+    },
+    {
+      "question": "In what year did the Titanic sink?",
+      "options": ["1905", "1912", "1920", "1935"],
+      "answer": "1912"
+    },
+    {
+      "question": "Who was the first President of the United States?",
+      "options": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "John Adams"],
+      "answer": "George Washington"
+    },
+    {
+      "question": "Which organ is responsible for pumping blood in the human body?",
+      "options": ["Liver", "Lungs", "Heart", "Kidney"],
+      "answer": "Heart"
+    },
+    {
+      "question": "What is the main ingredient in guacamole?",
+      "options": ["Tomato", "Avocado", "Onion", "Lime"],
+      "answer": "Avocado"
+    },
+    {
+      "question": "Which planet is closest to the sun?",
+      "options": ["Earth", "Venus", "Mercury", "Mars"],
+      "answer": "Mercury"
+    },
+    {
+      "question": "What is the tallest mountain in the world?",
+      "options": ["K2", "Kangchenjunga", "Mount Everest", "Lhotse"],
+      "answer": "Mount Everest"
+    },
+    {
+      "question": "What is the largest ocean on Earth?",
+      "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+      "answer": "Pacific Ocean"
+    }
+  ],
+  "math": [
+    {
+      "question": "What is the square root of 16?",
+      "options": ["2", "4", "8", "16"],
+      "answer": "4"
+    },
+    {
+      "question": "What is 10 divided by 2?",
+      "options": ["2", "5", "10", "20"],
+      "answer": "5"
+    },
+    {
+      "question": "What is 7 x 6?",
+      "options": ["42", "36", "40", "48"],
+      "answer": "42"
+    },
+    {
+      "question": "What is 5 + 7?",
+      "options": ["10", "12", "15", "14"],
+      "answer": "12"
+    },
+    {
+      "question": "What is 3/4 as a decimal?",
+      "options": ["0.75", "0.5", "1.25", "1.5"],
+      "answer": "0.75"
+    },
+    {
+      "question": "What is the value of π (pi)?",
+      "options": ["3.14", "3.16", "3.12", "3.18"],
+      "answer": "3.14"
+    },
+    {
+      "question": "What is the sum of angles in a triangle?",
+      "options": ["90 degrees", "180 degrees", "270 degrees", "360 degrees"],
+      "answer": "180 degrees"
+    },
+    {
+      "question": "What is 15% of 200?",
+      "options": ["25", "30", "35", "40"],
+      "answer": "30"
+    },
+    {
+      "question": "How many sides does a hexagon have?",
+      "options": ["5", "6", "7", "8"],
+      "answer": "6"
+    },
+    {
+      "question": "What is the perimeter of a square with side length 4?",
+      "options": ["16", "20", "12", "8"],
+      "answer": "16"
+    },
+    {
+      "question": "What is 8 + 8 x 2?",
+      "options": ["16", "24", "32", "64"],
+      "answer": "32"
+    },
+    {
+      "question": "What is the next prime number after 7?",
+      "options": ["8", "9", "10", "11"],
+      "answer": "11"
+    },
+    {
+      "question": "If a car travels at 60 km/h, how far will it travel in 2 hours?",
+      "options": ["60 km", "120 km", "150 km", "180 km"],
+      "answer": "120 km"
+    },
+    {
+      "question": "What is 100 divided by 4?",
+      "options": ["20", "25", "30", "35"],
+      "answer": "25"
+    },
+    {
+      "question": "What is the value of 3^2?",
+      "options": ["6", "8", "9", "12"],
+      "answer": "9"
+    },
+    {
+      "question": "What is 20% of 150?",
+      "options": ["25", "30", "35", "40"],
+      "answer": "30"
+    },
+    {
+      "question": "What is the value of 7 + 3 x 2?",
+      "options": ["13", "16", "10", "12"],
+      "answer": "13"
+    },
+    {
+      "question": "What is the median of the following numbers: 3, 5, 7?",
+      "options": ["3", "5", "6", "7"],
+      "answer": "5"
+    },
+    {
+      "question": "What is the area of a rectangle with length 10 and width 5?",
+      "options": ["50", "60", "70", "80"],
+      "answer": "50"
+    },
+    {
+      "question": "What is the next number in the sequence: 2, 4, 6, 8?",
+      "options": ["9", "10", "12", "14"],
+      "answer": "10"
+    },
+    {
+      "question": "What is the mode of the following numbers: 1, 2, 2, 3?",
+      "options": ["1", "2", "3", "4"],
+      "answer": "2"
+    }
+  ],
+  "science": [
+    {
+      "question": "What is the chemical symbol for gold?",
+      "options": ["Au", "Ag", "Fe", "Hg"],
+      "answer": "Au"
+    },
+    {
+      "question": "What planet is known for its rings?",
+      "options": ["Earth", "Mars", "Saturn", "Jupiter"],
+      "answer": "Saturn"
+    },
+    {
+      "question": "What is H2O commonly known as?",
+      "options": ["Hydrogen", "Water", "Oxygen", "Nitrogen"],
+      "answer": "Water"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Helium"],
+      "answer": "Carbon Dioxide"
+    },
+    {
+      "question": "What is the speed of light?",
+      "options": ["300,000 km/s", "150,000 km/s", "450,000 km/s", "600,000 km/s"],
+      "answer": "300,000 km/s"
+    },
+    {
+      "question": "What is the powerhouse of the cell?",
+      "options": ["Nucleus", "Mitochondria", "Ribosome", "Golgi Apparatus"],
+      "answer": "Mitochondria"
+    },
+    {
+      "question": "What is the main gas found in the air we breathe?",
+      "options": ["Oxygen", "Hydrogen", "Carbon Dioxide", "Nitrogen"],
+      "answer": "Nitrogen"
+    },
+    {
+      "question": "What type of animal is a shark?",
+      "options": ["Mammal", "Fish", "Reptile", "Amphibian"],
+      "answer": "Fish"
+    },
+    {
+      "question": "What is the main function of red blood cells?",
+      "options": ["Fight infection", "Transport oxygen", "Clot blood", "Produce hormones"],
+      "answer": "Transport oxygen"
+    },
+    {
+      "question": "What is the freezing point of water?",
+      "options": ["0°C", "32°C", "100°C", "212°C"],
+      "answer": "0°C"
+    },
+    {
+      "question": "What is the largest organ in the human body?",
+      "options": ["Heart", "Liver", "Skin", "Brain"],
+      "answer": "Skin"
+    },
+    {
+      "question": "What is the primary component of the Earth's atmosphere?",
+      "options": ["Oxygen", "Carbon Dioxide", "Argon", "Nitrogen"],
+      "answer": "Nitrogen"
+    },
+    {
+      "question": "What is a common unit of measure for energy?",
+      "options": ["Joule", "Watt", "Volt", "Ampere"],
+      "answer": "Joule"
+    },
+    {
+      "question": "What is the process by which plants make their own food?",
+      "options": ["Respiration", "Photosynthesis", "Transpiration", "Fermentation"],
+      "answer": "Photosynthesis"
+    },
+    {
+      "question": "What is the most abundant gas in the Earth's atmosphere?",
+      "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+      "answer": "Nitrogen"
+    },
+    {
+      "question": "What part of the plant conducts photosynthesis?",
+      "options": ["Roots", "Stem", "Leaves", "Flowers"],
+      "answer": "Leaves"
+    },
+    {
+      "question": "What is the study of living organisms called?",
+      "options": ["Biology", "Chemistry", "Physics", "Zoology"],
+      "answer": "Biology"
+    },
+    {
+      "question": "What is the main purpose of the scientific method?",
+      "options": ["To create theories", "To conduct experiments", "To analyze data", "To solve problems"],
+      "answer": "To conduct experiments"
+    },
+    {
+      "question": "What is the boiling point of water?",
+      "options": ["0°C", "50°C", "100°C", "212°C"],
+      "answer": "100°C"
+    },
+    {
+      "question": "What are the building blocks of proteins?",
+      "options": ["Carbohydrates", "Lipids", "Amino Acids", "Nucleotides"],
+      "answer": "Amino Acids"
+    },
+    {
+      "question": "What type of bond forms when atoms share electrons?",
+      "options": ["Ionic Bond", "Covalent Bond", "Hydrogen Bond", "Metallic Bond"],
+      "answer": "Covalent Bond"
+    }
+  ],
+  "history": [
+    {
+      "question": "Who was the first President of the United States?",
+      "options": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "John Adams"],
+      "answer": "George Washington"
+    },
+    {
+      "question": "In what year did World War II begin?",
+      "options": ["1935", "1939", "1945", "1950"],
+      "answer": "1939"
+    },
+    {
+      "question": "Who discovered America?",
+      "options": ["Christopher Columbus", "Ferdinand Magellan", "Leif Erikson", "Vasco da Gama"],
+      "answer": "Christopher Columbus"
+    },
+    {
+      "question": "What ancient civilization built the pyramids?",
+      "options": ["Aztecs", "Maya", "Romans", "Egyptians"],
+      "answer": "Egyptians"
+    },
+    {
+      "question": "Who was the leader of the Soviet Union during World War II?",
+      "options": ["Joseph Stalin", "Leon Trotsky", "Vladimir Lenin", "Mikhail Gorbachev"],
+      "answer": "Joseph Stalin"
+    },
+    {
+      "question": "What year did the Titanic sink?",
+      "options": ["1905", "1912", "1920", "1935"],
+      "answer": "1912"
+    },
+    {
+      "question": "Who was the first female Prime Minister of the United Kingdom?",
+      "options": ["Theresa May", "Margaret Thatcher", "Angela Merkel", "Golda Meir"],
+      "answer": "Margaret Thatcher"
+    },
+    {
+      "question": "What was the name of the first manned spacecraft to land on the Moon?",
+      "options": ["Apollo 11", "Gemini 8", "Vostok 1", "Challenger"],
+      "answer": "Apollo 11"
+    },
+    {
+      "question": "Which war was fought between the North and South regions in the United States?",
+      "options": ["World War I", "World War II", "Civil War", "Revolutionary War"],
+      "answer": "Civil War"
+    },
+    {
+      "question": "Who was known as the Iron Lady?",
+      "options": ["Margaret Thatcher", "Angela Merkel", "Indira Gandhi", "Golda Meir"],
+      "answer": "Margaret Thatcher"
+    },
+    {
+      "question": "In which year did the Berlin Wall fall?",
+      "options": ["1987", "1989", "1991", "1993"],
+      "answer": "1989"
+    },
+    {
+      "question": "What was the main cause of the French Revolution?",
+      "options": ["Social Inequality", "Taxation", "Monarchy", "All of the Above"],
+      "answer": "All of the Above"
+    },
+    {
+      "question": "Who was the famous civil rights leader known for his 'I Have a Dream' speech?",
+      "options": ["Malcolm X", "Martin Luther King Jr.", "Rosa Parks", "Nelson Mandela"],
+      "answer": "Martin Luther King Jr."
+    },
+    {
+      "question": "What was the primary language spoken in ancient Rome?",
+      "options": ["Latin", "Greek", "Spanish", "Italian"],
+      "answer": "Latin"
+    },
+    {
+      "question": "What year did the United States declare independence?",
+      "options": ["1776", "1789", "1791", "1801"],
+      "answer": "1776"
+    },
+    {
+      "question": "Who was the first emperor of China?",
+      "options": ["Qin Shi Huang", "Kublai Khan", "Sun Yat-sen", "Mao Zedong"],
+      "answer": "Qin Shi Huang"
+    },
+    {
+      "question": "What was the name of the ship that carried the Pilgrims to America?",
+      "options": ["Mayflower", "Santa Maria", "Titanic", "Nina"],
+      "answer": "Mayflower"
+    },
+    {
+      "question": "What was the Cold War primarily about?",
+      "options": ["Capitalism vs. Communism", "Nuclear Weapons", "Space Race", "All of the Above"],
+      "answer": "All of the Above"
+    },
+    {
+      "question": "Who was the famous artist that painted the Sistine Chapel?",
+      "options": ["Leonardo da Vinci", "Vincent Van Gogh", "Pablo Picasso", "Michelangelo"],
+      "answer": "Michelangelo"
+    },
+    {
+      "question": "What was the main cause of the Great Depression?",
+      "options": ["Stock Market Crash", "World War II", "Overproduction", "Inflation"],
+      "answer": "Stock Market Crash"
+    }
+  ],
+  "geography": [
+    {
+      "question": "What is the capital of Australia?",
+      "options": ["Sydney", "Canberra", "Melbourne", "Brisbane"],
+      "answer": "Canberra"
+    },
+    {
+      "question": "Which continent is the Sahara Desert located in?",
+      "options": ["Asia", "Africa", "North America", "Australia"],
+      "answer": "Africa"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "options": ["Nile", "Amazon", "Yangtze", "Mississippi"],
+      "answer": "Nile"
+    },
+    {
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "options": ["Japan", "China", "South Korea", "Thailand"],
+      "answer": "Japan"
+    },
+    {
+      "question": "What is the largest ocean on Earth?",
+      "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+      "answer": "Pacific Ocean"
+    },
+    {
+      "question": "Which country is the Great Pyramid of Giza located in?",
+      "options": ["Egypt", "Sudan", "Greece", "Iraq"],
+      "answer": "Egypt"
+    },
+    {
+      "question": "What is the highest mountain in the world?",
+      "options": ["K2", "Kilimanjaro", "Mount Everest", "Denali"],
+      "answer": "Mount Everest"
+    },
+    {
+      "question": "Which city is known as the Big Apple?",
+      "options": ["Los Angeles", "Chicago", "New York City", "San Francisco"],
+      "answer": "New York City"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "options": ["Vatican City", "Monaco", "Nauru", "San Marino"],
+      "answer": "Vatican City"
+    },
+    {
+      "question": "Which desert is the largest in the world?",
+      "options": ["Sahara", "Gobi", "Kalahari", "Patagonian"],
+      "answer": "Sahara"
+    },
+    {
+      "question": "What is the capital of Canada?",
+      "options": ["Toronto", "Ottawa", "Vancouver", "Montreal"],
+      "answer": "Ottawa"
+    },
+    {
+      "question": "Which river flows through Egypt?",
+      "options": ["Nile", "Amazon", "Mississippi", "Tigris"],
+      "answer": "Nile"
+    },
+    {
+      "question": "What is the capital of Italy?",
+      "options": ["Rome", "Milan", "Florence", "Venice"],
+      "answer": "Rome"
+    },
+    {
+      "question": "Which mountain range separates Europe and Asia?",
+      "options": ["Andes", "Rockies", "Urals", "Appalachians"],
+      "answer": "Urals"
+    },
+    {
+      "question": "Which country has the most natural lakes?",
+      "options": ["Canada", "India", "Brazil", "Russia"],
+      "answer": "Canada"
+    },
+    {
+      "question": "Which ocean is off the east coast of the United States?",
+      "options": ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean", "Arctic Ocean"],
+      "answer": "Atlantic Ocean"
+    },
+    {
+      "question": "What is the largest country in the world?",
+      "options": ["Canada", "United States", "China", "Russia"],
+      "answer": "Russia"
+    },
+    {
+      "question": "Which city is known as the City of Love?",
+      "options": ["Paris", "Rome", "Venice", "Barcelona"],
+      "answer": "Paris"
+    },
+    {
+      "question": "What is the official language of Brazil?",
+      "options": ["Spanish", "Portuguese", "English", "French"],
+      "answer": "Portuguese"
+    },
+    {
+      "question": "Which continent is known for its unique wildlife, including kangaroos?",
+      "options": ["Asia", "Africa", "Australia", "North America"],
+      "answer": "Australia"
+    }
+  ],
+  "english": [
+    {
+      "question": "What is the synonym of 'happy'?",
+      "options": ["Sad", "Joyful", "Angry", "Tired"],
+      "answer": "Joyful"
+    },
+    {
+      "question": "What is the antonym of 'difficult'?",
+      "options": ["Easy", "Hard", "Complicated", "Simple"],
+      "answer": "Easy"
+    },
+    {
+      "question": "What is the plural of 'child'?",
+      "options": ["Childs", "Children", "Childes", "Childer"],
+      "answer": "Children"
+    },
+    {
+      "question": "What is the past tense of 'go'?",
+      "options": ["Gone", "Went", "Going", "Go"],
+      "answer": "Went"
+    },
+    {
+      "question": "What is the meaning of 'benevolent'?",
+      "options": ["Malevolent", "Kind", "Generous", "Cruel"],
+      "answer": "Kind"
+    },
+    {
+      "question": "What is a synonym for 'quick'?",
+      "options": ["Slow", "Fast", "Rapid", "Swift"],
+      "answer": "Rapid"
+    },
+    {
+      "question": "What is the antonym of 'noisy'?",
+      "options": ["Loud", "Quiet", "Calm", "Boring"],
+      "answer": "Quiet"
+    },
+    {
+      "question": "What is the meaning of 'meticulous'?",
+      "options": ["Careless", "Precise", "Hasty", "Rushed"],
+      "answer": "Precise"
+    },
+    {
+      "question": "What is the synonym of 'difficult'?",
+      "options": ["Easy", "Challenging", "Simple", "Clear"],
+      "answer": "Challenging"
+    },
+    {
+      "question": "What is the antonym of 'generous'?",
+      "options": ["Selfish", "Giving", "Charitable", "Kind"],
+      "answer": "Selfish"
+    },
+    {
+      "question": "What is the plural of 'mouse'?",
+      "options": ["Mouses", "Mice", "Mices", "Mousies"],
+      "answer": "Mice"
+    },
+    {
+      "question": "What is the past tense of 'eat'?",
+      "options": ["Eaten", "Ate", "Eating", "Eat"],
+      "answer": "Ate"
+    },
+    {
+      "question": "What is the meaning of 'arduous'?",
+      "options": ["Easy", "Difficult", "Simple", "Clear"],
+      "answer": "Difficult"
+    },
+    {
+      "question": "What is a synonym for 'brave'?",
+      "options": ["Cowardly", "Fearful", "Courageous", "Timid"],
+      "answer": "Courageous"
+    },
+    {
+      "question": "What is the antonym of 'bright'?",
+      "options": ["Dim", "Loud", "Faint", "Dull"],
+      "answer": "Dim"
+    },
+    {
+      "question": "What is the plural of 'tooth'?",
+      "options": ["Tooths", "Teeth", "Tooths", "Tee"],
+      "answer": "Teeth"
+    },
+    {
+      "question": "What is the past tense of 'write'?",
+      "options": ["Written", "Wrote", "Writing", "Write"],
+      "answer": "Wrote"
+    },
+    {
+      "question": "What is the meaning of 'indifferent'?",
+      "options": ["Caring", "Apathetic", "Enthusiastic", "Passionate"],
+      "answer": "Apathetic"
+    },
+    {
+      "question": "What is a synonym for 'difficult'?",
+      "options": ["Simple", "Challenging", "Easy", "Clear"],
+      "answer": "Challenging"
+    },
+    {
+      "question": "What is the antonym of 'optimistic'?",
+      "options": ["Pessimistic", "Hopeful", "Positive", "Bright"],
+      "answer": "Pessimistic"
+    }
+  ],
+  "timing": {
+    "general": 60,
+    "math": 60,
+    "science": 60,
+    "history": 60,
+    "geography": 60,
+    "english": 60
+  }
+}

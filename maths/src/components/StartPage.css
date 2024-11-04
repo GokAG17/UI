@@ -1,0 +1,42 @@
+.startPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/space.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center; /* Center-align text */
+    color: white; /* White text color */
+    font-family: 'Arial', sans-serif; /* Set font */
+  }
+  
+  .startPageContainer h2 {
+    font-size: 3em; /* Increase font size */
+    margin-bottom: 20px; /* Space below the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+  }
+  
+  .startPageButton {
+    margin: 10px 0; /* Space around buttons */
+    padding: 15px 30px; /* Increase padding for buttons */
+    font-size: 1.5em; /* Increase font size of buttons */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Animation effects */
+  }
+  
+  .startPageButton:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Change background on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+  }
+  
+  .settingsButton {
+    background-color: #f0ad4e; /* Settings button color */
+  }
+  
+  .startPageButton:focus {
+    outline: none; /* Remove focus outline */
+  }
+  

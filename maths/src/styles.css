@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-size: cover;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent for contrast */
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+}
+
+.game-container {
+  text-align: center;
+  color: white;
+}body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+}
+
+.header {
+  background-color: #1e1e1e;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  padding: 50px;
+}
+
+
+.ship-button {
+  transition: transform 0.3s;
+}
+
+.ship-button:hover {
+  transform: scale(1.05);
+}

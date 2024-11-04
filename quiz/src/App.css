@@ -1,0 +1,45 @@
+/* Global CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Layout and Containers */
+html,
+body {
+  height: 100%;
+}
+
+/* Basic Styling for Common Elements */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}

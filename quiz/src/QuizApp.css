@@ -1,0 +1,21 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.start-quiz, .quiz-results, .quiz-content {
+  text-align: center;
+}
+
+.feedback {
+  margin-top: 20px;
+}

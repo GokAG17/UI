@@ -1,0 +1,33 @@
+.start-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.start-page__title {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.start-page__description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.start-page__button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.start-page__button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,36 @@
+/* src/components/ShipSelection.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/space.jpg') no-repeat center center;
+    background-size: cover;
+    color: white; /* Change text color to make it stand out */
+}
+
+.ship-card {
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 8px; /* Reduced padding */
+    margin: 10px; /* Add margin to space out cards */
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    width: 150px; /* Set a specific width */
+    height: auto; /* Set height to auto to fit image */
+}
+
+.ship-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.ship-image {
+    width: 100%; /* This keeps the image filling the width of the card */
+    height: 200px; /* Increased height for the image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px; /* Keep the rounded corners */
+}

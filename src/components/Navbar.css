@@ -1,0 +1,69 @@
+.custom-sider {
+  background-color: #171717 !important;
+}
+
+.custom-sider .logo {
+  color: white;
+  font-size: 24px;
+  padding: 16px;
+  text-align: center;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #000;
+}
+
+.custom-menu {
+  font-size: 16px;
+  color: #fff;
+  padding-top: 20px;
+  background-color: #1a1a1a !important;
+}
+
+.custom-menu .ant-menu-item-selected {
+  background-color: #333333 !important;
+}
+
+.custom-menu .ant-menu-item:hover {
+  background-color: #4a4a4a !important;
+}
+
+.content {
+  margin: 20px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-header {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.page-content {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.toggle-button {
+  color: white;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 18px;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+  color: white;
+}
+
+.toggle-button:hover .anticon,
+.toggle-button:active .anticon {
+  color: white;
+}
+
+.toggle-button:active {
+  color: white;
+}

@@ -1,0 +1,116 @@
+/* FinalTemplate.css */
+
+.quiz-title {
+    text-align: center;
+    font-size: 2.5em; /* Increased font size */
+    margin-bottom: 30px; /* Increased margin */
+    color: #333;
+}
+
+.question-box {
+    padding: 30px; /* Increased padding */
+    border-radius: 10px;
+    margin-bottom: 30px; /* Increased margin for spacing */
+    transition: background-color 0.3s;
+    width: 100%; /* Full width for the question box */
+    background-color: #ffffff; /* White background for questions */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    display: flex; /* Flexbox for inner layout */
+    flex-direction: column; /* Vertical stacking */
+    align-items: center; /* Center contents */
+}
+
+.question-text {
+    font-size: 1.5em; /* Adjusted font size */
+    font-weight: bold;
+    margin-bottom: 15px; /* Increased margin */
+    text-align: center; /* Center text */
+}
+
+.answer-input {
+    width: 90%; /* Full width input */
+    padding: 12px; /* Increased padding */
+    font-size: 1em; /* Standard font size */
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Increased margin */
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.answer-input:focus {
+    border-color: #0056b3;
+}
+
+.submit-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    font-size: 1em; /* Standard font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%; /* Full width button */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover:not(.disabled) {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.submit-button:active {
+    transform: translateY(1px); /* Pressed effect */
+}
+
+.submit-button.disabled {
+    background-color: #007BFF;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.feedback-container {
+    margin-top: 30px; /* Increased margin for better spacing */
+    text-align: center;
+}
+
+.feedback-text {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.feedback-text.correct {
+    color: green;
+}
+
+.feedback-text.incorrect {
+    color: red;
+}
+
+.next-button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    font-size: 1em; /* Standard font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%; /* Full width button */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.next-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.next-button:active {
+    transform: translateY(1px); /* Pressed effect */
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #555; /* Subtle color for loading text */
+}

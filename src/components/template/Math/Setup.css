@@ -1,0 +1,46 @@
+
+.setup-card {
+  background-color: #333; /* Darker background for the card */
+  border: none; /* Remove card border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  width: 500px;
+  color: white; /* Default text color for the card */
+}
+
+.setup-card .ant-card-head-title {
+  color: white; /* Title color */
+}
+
+
+.setup-card .label {
+  color: white !important; /* Label color */
+}
+
+.input-field,
+.select-field,
+.input-number {
+  background-color: #555 !important; /* Dark background for input fields */
+  color: white; /* White text */
+  border: 1px solid #777; /* Border color */
+  border-radius: 4px; /* Slightly rounded corners */
+}
+
+.input-field:focus,
+.select-field:focus,
+.input-number:focus {
+  border-color: #1e90ff; /* Light blue border on focus */
+  box-shadow: none; /* Remove default focus shadow */
+}
+
+.primary-button {
+  background-color: #1e90ff; /* Button color */
+  border-color: #1e90ff; /* Button border color */
+}
+
+.primary-button:hover {
+  background-color: #00bfff; /* Brighter blue on hover */
+  border-color: #00bfff; /* Brighter blue border on hover */
+}
+

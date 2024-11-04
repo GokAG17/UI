@@ -1,0 +1,56 @@
+/* CompletedPage.css */
+
+.completed-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7f9fc;
+  color: #333;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.completed-page__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #4a90e2;
+}
+
+.completed-page__score {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.completed-page__message {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.completed-page__button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.completed-page__button:hover {
+  background-color: #357ab7;
+}
+
+.completed-page__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.5);
+}
