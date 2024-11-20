@@ -97,13 +97,13 @@ const Questionnaire = ({ handleSubmitAll }) => {
   return (
     <div className="questionnaire-container">
       <div className="card">
-        <h2 className="question-title">{currentQuestion.label}</h2>
+        <h2 className="questiontitle">{currentQuestion.label}</h2>
         {currentQuestion.isSelect ? (
           <select
             value={userInput}
             onChange={handleChange}
             required
-            className="input-select"
+            className="inputselect"
           >
             {currentQuestion.options.map((option) => (
               <option key={option.value} value={option.value}>
@@ -119,7 +119,7 @@ const Questionnaire = ({ handleSubmitAll }) => {
             min={currentQuestion.min}
             max={currentQuestion.max}
             required
-            className="input-field"
+            className="inputfield"
           />
         )}
         {errorMessage && (
@@ -127,18 +127,18 @@ const Questionnaire = ({ handleSubmitAll }) => {
             message={errorMessage}
             type="error"
             showIcon
-            className="error-alert"
+            className="erroralert"
           />
         )}
         <Progress
           percent={((step + 1) / questions.length) * 100}
-          className="progress-bar"
+          className="progressbar"
           strokeColor="#1890ff"
           showInfo={false}
         />
         <div className="button-group">
           {step > 0 && (
-            <Button onClick={handleBack} className="back-button">
+            <Button onClick={handleBack} className="backbutton">
               Back
             </Button>
           )}
@@ -155,12 +155,12 @@ const Questionnaire = ({ handleSubmitAll }) => {
                 });
               }}
               type="primary"
-              className="next-button"
+              className="nextbutton"
             >
               Configure
             </Button>
           ) : (
-            <Button onClick={handleNext} type="primary" className="next-button">
+            <Button onClick={handleNext} type="primary" className="nextbutton">
               Next
             </Button>
           )}

@@ -1,0 +1,48 @@
+.car {
+  position: absolute;
+  bottom: 0;
+  width: 200px; /* Default width for the car */
+  height: auto; /* Maintain aspect ratio for the height */
+  transition: left 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smooth transition */
+  z-index: 10; /* Ensure it appears above the road */
+  border-radius: 8px; /* Optional: round edges slightly */
+  transform: translateX(-50%); /* Center the car horizontally on its lane */
+}
+
+.car.left {
+  left: 25%; /* Adjusted position for left lane */
+}
+
+.car.right {
+  left: 80%; /* Adjusted position for right lane */
+}
+
+.car-image {
+  width: 150px; /* Make the car image fill the container */
+  height: auto; /* Maintain aspect ratio for the image height */
+  transition: transform 0.2s ease-in-out; /* Smooth scaling on hover */
+}
+
+/* Hover effect to slightly zoom in */
+.car:hover .car-image {
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .car {
+      width: 140px; /* Smaller width for medium screens */
+  }
+}
+
+@media (max-width: 800px) {
+  .car {
+      width: 100px; /* Smaller width for small screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .car {
+      width: 80px; /* Even smaller width for very small screens */
+  }
+}

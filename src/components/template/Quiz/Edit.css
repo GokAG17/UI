@@ -33,7 +33,7 @@
     color: white; /* Label text color */
 }
 
-.input-field {
+.input-field1 {
     flex-basis: 50%; /* Control width of inputs */
     color: black; /* Black text color for input fields by default */
     background-color: white; /* Set the background color to white by default */
@@ -43,25 +43,25 @@
 }
 
 /* Styles for when the input is focused */
-.input-field:focus {
+.input-field1:focus {
     color: black; /* Keep text color black when typing */
     background-color: white; /* Keep background color white when typing */
     outline: none; /* Remove outline on focus */
 }
 
 /* Placeholder color when not focused */
-.input-field::placeholder {
+.input-field1::placeholder {
     color: #aaa; /* Placeholder text color */
 }
 
 /* Styles when the input is empty */
-.input-field:placeholder-shown {
-    color: white; /* Text color is white when no input */
-    background-color: black; /* Background color is black when no input */
+.input-field1:placeholder-shown {
+    color: rgb(0, 0, 0); /* Text color is white when no input */
+    background-color: rgb(255, 255, 255); /* Background color is black when no input */
 }
 
 /* Styles when focused and there is no text */
-.input-field:focus:placeholder-shown {
+.input-field1:focus:placeholder-shown {
     color: white; /* Keep text color white when focused with no input */
     background-color: black; /* Background color is black when focused and no input */
 }

@@ -1,17 +1,24 @@
 {
     "questions": [
-      {
-        "question": "The capital of France is _____.",
-        "answer": "paris"
-      },
-      {
-        "question": "The largest ocean on Earth is the _____.",
-        "answer": "pacific"
-      },
-      {
-        "question": "The first president of the United States was _____.",
-        "answer": "george washington"
-      }
+        {
+            "question": "Artificial Intelligence (AI) is a type of ______________ that allows computers to think and learn like humans.",
+            "answer": "machine learning"
+        },
+        {
+            "question": "AI can be used for various tasks such as ______________, healthcare, and education.",
+            "answer": "applications"
+        },
+        {
+            "question": "The development of AI has the potential to revolutionize many fields including ______________ and transportation.",
+            "answer": "transportation"
+        },
+        {
+            "question": "AI systems often rely on large amounts of ______________ data to improve their performance.",
+            "answer": "datasets"
+        },
+        {
+            "question": "One of the benefits of AI is that it can help automate ______________ tasks, freeing up time for humans to focus on more creative work.",
+            "answer": "repetitive"
+        }
     ]
-  }
-  
+}

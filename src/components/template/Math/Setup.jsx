@@ -7,7 +7,7 @@ const { Option } = Select;
 
 const Setup = ({ onDataReceived }) => {
   const [form] = Form.useForm();
-  
+
   const handleSubmit = async (values) => {
     // Collecting form values
     const config = {
@@ -43,22 +43,23 @@ const Setup = ({ onDataReceived }) => {
         }}
       >
         <Form.Item
-          className="label" // Use class name for label styling
-          label="Topic"
+          className="label1" // Use class name for label styling
+          label={<span style={{ color: "#ffffff" }}>Number of Questions</span>}
           name="topic"
-          rules={[{ required: true, message: "Please enter a topic!" }]}
+          rules={[
+            { required: true, message: "Please enter number of questions" },
+          ]}
         >
-          <Input
-            className="input-field"
-            placeholder="Enter the topic (e.g., Math)"
-          />
+          <Input className="input-field" placeholder="Number of Questions" />
         </Form.Item>
 
         <Form.Item
-          className="label" // Use class name for label styling
-          label="Number Format"
+          className="label1" // Use class name for label styling
+          label={<span style={{ color: "#ffffff" }}>Number format</span>}
           name="numberFormat"
-          rules={[{ required: true, message: "Please select a number format!" }]}
+          rules={[
+            { required: true, message: "Please select a number format!" },
+          ]}
         >
           <Select className="select-field" placeholder="Select number format">
             <Option value="two-digit">Two-Digit</Option>
@@ -67,10 +68,12 @@ const Setup = ({ onDataReceived }) => {
         </Form.Item>
 
         <Form.Item
-          className="label" // Use class name for label styling
-          label="Operation Type"
+          className="label1" // Use class name for label styling
+          label={<span style={{ color: "#ffffff" }}>Operation Type</span>}
           name="operation"
-          rules={[{ required: true, message: "Please select an operation type!" }]}
+          rules={[
+            { required: true, message: "Please select an operation type!" },
+          ]}
         >
           <Select className="select-field" placeholder="Select operation type">
             <Option value="addition">Addition</Option>
@@ -81,19 +84,26 @@ const Setup = ({ onDataReceived }) => {
         </Form.Item>
 
         <Form.Item
-          className="label" // Use class name for label styling
-          label="Number of Options"
+          className="label1" // Use class name for label styling
+          label={<span style={{ color: "#ffffff" }}>Number of Options</span>}
           name="options"
-          rules={[{ required: true, message: "Please specify the number of options!" }]}
+          rules={[
+            {
+              required: true,
+              message: "Please specify the number of options!",
+            },
+          ]}
         >
           <InputNumber className="input-number" min={2} max={6} />
         </Form.Item>
 
         <Form.Item
-          className="label" // Use class name for label styling
-          label="Time Delay (seconds)"
+          className="label1" // Use class name for label styling
+          label={<span style={{ color: "#ffffff" }}>Time Delay</span>}
           name="timeDelay"
-          rules={[{ required: true, message: "Please specify the time delay!" }]}
+          rules={[
+            { required: true, message: "Please specify the time delay!" },
+          ]}
         >
           <InputNumber className="input-number" min={1} max={60} />
         </Form.Item>

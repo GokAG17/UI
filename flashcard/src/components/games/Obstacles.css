@@ -1,0 +1,18 @@
+.obstacle {
+    position: absolute;
+    width: 90px; /* Adjust width for your obstacle */
+    height: 90px; /* Adjust height for your obstacle */
+    background-image: url('../../assets/gold-coin.gif'); /* Path to your gold coin image */
+    background-size: cover; /* Ensure the image covers the entire obstacle */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-color: transparent; /* Ensure the background is transparent */
+    border-radius: 50%; /* Optional: make the edges rounded */
+}
+
+.obstacle.left {
+    left: 18.5%; /* Position for left lane */
+}
+
+.obstacle.right {
+    left: 73.5%; /* Position for right lane */
+}

@@ -43,7 +43,7 @@ const Game = () => {
     try {
       const response = await fetch("/questions.json");
       const data = await response.json();
-      setQuestions(data);
+      setQuestions(data.questions);
     } catch (error) {
       console.error("Error fetching questions:", error);
     }
@@ -341,7 +341,7 @@ const Game = () => {
               className="option"
               style={{
                 width: "100%",
-                fontSize: "24px",
+                fontSize: "30px",
                 fontWeight: "bold",
                 display: "flex",
                 alignItems: "center",

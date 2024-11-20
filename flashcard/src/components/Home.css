@@ -1,0 +1,63 @@
+/* Home.css */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1f4037, #99f2c8); /* Gradient background */
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite; /* Gradient animation */
+    overflow: hidden;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .home-content {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+  }
+  
+  .start-button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #1abc9c; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(26, 188, 156, 0.4); /* Box shadow for button */
+  }
+  
+  .start-button:hover {
+    background-color: #16a085; /* Darker shade on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+  }
+  
+  .start-button:active {
+    background-color: #149174; /* Even darker on click */
+    transform: translateY(1px); /* Button goes down slightly */
+  }
+  

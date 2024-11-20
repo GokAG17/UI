@@ -3,8 +3,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./QuizTemplate.css";
 
 const FinalTemplate = () => {
-  const { state } = useLocation();
-  const { questionBoxColor, optionBoxColor, fontColor, fontSize } = state || {};
   const navigate = useNavigate();
 
   const [mcqData, setMcqData] = useState([]);
@@ -14,6 +12,13 @@ const FinalTemplate = () => {
   const [intervalId, setIntervalId] = useState(null);
   const [quizStarted, setQuizStarted] = useState(false);
   const [score, setScore] = useState(0);
+
+  const [questionBoxColor, setQuestionBoxColor] = useState("#ffffff");
+  const [optionBoxColor, setOptionBoxColor] = useState("#f0f0f0");
+  const [optionBoxSize, setOptionBoxSize] = useState("");
+  const [questionBoxSize, setquestionBoxSize] = useState("");
+  const [fontColor, setFontColor] = useState("#000000");
+  const [fontSize, setFontSize] = useState("16px");
 
   const fetchMCQs = async () => {
     try {
@@ -33,6 +38,30 @@ const FinalTemplate = () => {
       console.error("Error fetching MCQs:", error);
     }
   };
+
+  const fetchStylingValues = async () => {
+    try {
+      const response = await fetch("/styling.json"); // Change the path to your styling config file or API
+      if (!response.ok) {
+        throw new Error("Failed to load styling values");
+      }
+      const data = await response.json();
+      console.log(data);
+      setQuestionBoxColor(data.questionBoxColor);
+      setOptionBoxColor(data.optionBoxColor);
+      setFontColor(data.fontColor);
+      setFontSize(data.fontSize);
+      setOptionBoxSize(data.optionBoxSize);
+      setquestionBoxSize(data.questionBoxSize);
+    } catch (error) {
+      console.error("Error fetching styling values:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchMCQs();
+    fetchStylingValues();
+  }, []);
 
   useEffect(() => {
     fetchMCQs();
@@ -140,7 +169,8 @@ const FinalTemplate = () => {
         style={{
           backgroundColor: questionBoxColor,
           color: fontColor,
-          fontSize,
+          fontSize: fontSize,
+          padding: optionBoxSize,
         }}
       >
         <p>{currentMCQ.question}</p>
@@ -157,7 +187,8 @@ const FinalTemplate = () => {
               backgroundColor:
                 highlightedOption === i ? "#d1e7dd" : optionBoxColor,
               color: fontColor,
-              fontSize,
+              fontSize: fontSize,
+              padding: optionBoxSize,
             }}
           >
             {option}

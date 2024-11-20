@@ -1,0 +1,47 @@
+/* Centering the road container */
+.road-container {
+    position: fixed; /* Fixes the position to the viewport */
+    top: 0; /* Aligns to the top of the viewport */
+    left: 50%; /* Center horizontally */
+    width: 45vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    transform: translateX(-50%); /* Centering horizontally */
+    overflow: hidden; /* Hide any overflow */
+    z-index: -1; /* Ensures it stays behind other game elements */
+}
+
+/* Road background styling */
+.road {
+    position: absolute; /* Position both roads absolutely within the container */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height */
+    background-image: url('../../assets/road1.jpg'); /* Path to your road image */
+    background-size: cover; /* Ensures the background covers the entire element */
+    background-repeat: no-repeat; /* Prevent repeating */
+}
+
+/* Scrolling animation for road */
+.road:nth-child(1) {
+    top: -100%; /* Start above the viewport */
+    animation: scrollDown 5s linear infinite; /* Scroll downwards */
+}
+
+.road:nth-child(2) {
+    top: 0; /* Start at the viewport */
+    animation: scrollDown 5s linear infinite; /* Same animation */
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scrollDown {
+    0% {
+        transform: translateY(0); /* Initial position */
+    }
+    100% {
+        transform: translateY(100%); /* Move downwards by its height */
+    }
+}
+
+/* Pausing the animation when the game is paused */
+.paused .road {
+    animation-play-state: paused; /* Pause animation */
+}

@@ -28,12 +28,18 @@ const TemplateEditor = ({ onTemplateEdit }) => {
   return (
     <div className="template-editor-container">
       <Card className="template-editor-card">
-        <Title level={4} className="template-editor-title">Edit Template</Title>
+        <Title level={4} className="template-editor-title">
+          Edit Template
+        </Title>
         <Space direction="vertical" size="small" style={{ width: "100%" }}>
           <div className="form-item">
             <label>Question Box Color:</label>
             <Popover
-              content={<ColorPicker onChange={(color) => setQuestionBoxColor(color)} />}
+              content={
+                <ColorPicker
+                  onChange={(color) => setQuestionBoxColor(color.toHexString())}
+                />
+              }
               title="Select Color"
             >
               <Button
@@ -54,14 +60,18 @@ const TemplateEditor = ({ onTemplateEdit }) => {
               value={questionBoxSize}
               onChange={(e) => setQuestionBoxSize(e.target.value)}
               placeholder="20px"
-              className="input-field"
+              className="input-field1"
             />
           </div>
 
           <div className="form-item">
             <label>Option Box Color:</label>
             <Popover
-              content={<ColorPicker onChange={(color) => setOptionBoxColor(color)} />}
+              content={
+                <ColorPicker
+                  onChange={(color) => setOptionBoxColor(color.toHexString())}
+                />
+              }
               title="Select Color"
             >
               <Button
@@ -82,14 +92,18 @@ const TemplateEditor = ({ onTemplateEdit }) => {
               value={optionBoxSize}
               onChange={(e) => setOptionBoxSize(e.target.value)}
               placeholder="10px"
-              className="input-field"
+              className="input-field1"
             />
           </div>
 
           <div className="form-item">
             <label>Font Color:</label>
             <Popover
-              content={<ColorPicker onChange={(color) => setFontColor(color)} />}
+              content={
+                <ColorPicker
+                  onChange={(color) => setFontColor(color.toHexString())}
+                />
+              }
               title="Select Color"
             >
               <Button
@@ -107,7 +121,7 @@ const TemplateEditor = ({ onTemplateEdit }) => {
               value={fontSize}
               onChange={(e) => setFontSize(e.target.value)}
               placeholder="16px"
-              className="input-field"
+              className="input-field1"
             />
           </div>
 
