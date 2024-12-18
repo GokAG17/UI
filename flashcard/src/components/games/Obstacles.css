@@ -10,9 +10,9 @@
 }
 
 .obstacle.left {
-    left: 18.5%; /* Position for left lane */
+    left: 15.5%; /* Position for left lane */
 }
 
 .obstacle.right {
-    left: 73.5%; /* Position for right lane */
+    left: 70.5%; /* Position for right lane */
 }

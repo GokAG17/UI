@@ -1,0 +1,84 @@
+.template-editor-container {
+    max-width: 500px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container */
+}
+
+.template-editor-card {
+    border: none; /* Remove the card border */
+    box-shadow: none; /* Remove shadow for a flat look */
+    padding: 20px; /* Add padding inside the card */
+    background-color: #3d3d3d; /* Card background */
+    color: white; /* Set text color to white */
+    font-size: medium;
+}
+
+.template-editor-card .template-editor-title {
+    color: white;
+    margin-bottom: 20px; /* Space between title and form */
+    text-align: center; /* Center the title */
+}
+
+
+.form-item {
+    display: flex;
+    justify-content: space-between; /* Align label and input/button on opposite sides */
+    align-items: center; /* Vertically center the items */
+    margin-bottom: 15px; /* Space between each form item */
+}
+
+.form-label {
+    margin-right: 10px; /* Space between label and input/button */
+    flex-basis: 40%; /* Control width of labels */
+    text-align: right; /* Right-align labels */
+    color: white; /* Label text color */
+}
+
+.input-field1 {
+    flex-basis: 50%; /* Control width of inputs */
+    color: black; /* Black text color for input fields by default */
+    background-color: white; /* Set the background color to white by default */
+    border: 1px solid #333; /* Border color for input fields */
+    padding: 5px; /* Optional: add some padding for better appearance */
+    transition: all 0.3s ease; /* Optional: smooth transition for color changes */
+}
+
+/* Styles for when the input is focused */
+.input-field1:focus {
+    color: black; /* Keep text color black when typing */
+    background-color: white; /* Keep background color white when typing */
+    outline: none; /* Remove outline on focus */
+}
+
+/* Placeholder color when not focused */
+.input-field1::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+/* Styles when the input is empty */
+.input-field1:placeholder-shown {
+    color: rgb(0, 0, 0); /* Text color is white when no input */
+    background-color: rgb(255, 255, 255); /* Background color is black when no input */
+}
+
+/* Styles when focused and there is no text */
+.input-field1:focus:placeholder-shown {
+    color: white; /* Keep text color white when focused with no input */
+    background-color: black; /* Background color is black when focused and no input */
+}
+
+
+
+.save-button {
+    margin-top: 20px; /* Space above the save button */
+    width: 100%; /* Make the button full-width */
+    padding: 10px; /* Add padding for a better touch area */
+    background-color: #4CAF50; /* Green background for the button */
+    color: white; /* White text color for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.save-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

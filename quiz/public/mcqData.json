@@ -1,54 +1,54 @@
 {
     "questions": [
         {
-            "question": "What does 'TamilCinema' refer to?",
+            "question": "What is the primary function of a computer?",
             "options": [
-                "Indian Film Industry",
-                "South Indian Movies",
-                "Tamil Language Films",
-                "Bollywood Movies"
+                "To play games",
+                "To watch videos",
+                "To perform calculations and store data",
+                "To communicate with other devices"
             ],
-            "correct_answer": "Tamil Language Films"
+            "correct_answer": "To perform calculations and store data"
         },
         {
-            "question": "Who is often credited with the renaissance of Tamil cinema in the 1990s?",
+            "question": "Which part of a computer stores data?",
             "options": [
-                "M. G. Ramachandran",
-                "Kamal Haasan",
-                "Nagarjuna",
-                "Sivaji Ganeshan"
+                "CPU",
+                "Motherboard",
+                "Hard Drive",
+                "RAM"
             ],
-            "correct_answer": "Kamal Haasan"
+            "correct_answer": "Hard Drive"
         },
         {
-            "question": "What is the name of the film industry based in Chennai, Tamil Nadu?",
+            "question": "What is the 'CPU' in a computer?",
             "options": [
-                "Tollywood",
-                "Mollywood",
-                "Sandowal",
-                "Kollywood"
+                "Central Processing Unit",
+                "Power Supply Unit",
+                "Memory",
+                "Graphics Card"
             ],
-            "correct_answer": "Kollywood"
+            "correct_answer": "Central Processing Unit"
         },
         {
-            "question": "Who is a prominent actor and director known for his work in Tamil cinema?",
+            "question": "How do computers process information?",
             "options": [
-                "Ajith Kumar",
-                "Vijayakanth",
-                "Suriya",
-                "Rajinikanth"
+                "By using a physical keyboard and mouse",
+                "By using wireless signals",
+                "By reading and executing instructions stored in the computer's memory",
+                "By playing games on the screen"
             ],
-            "correct_answer": "Rajinikanth"
+            "correct_answer": "By reading and executing instructions stored in the computer's memory"
         },
         {
-            "question": "In what year was the Indian film 'Nayakan' released, which is considered a classic of Tamil cinema?",
+            "question": "What is the 'RAM' in a computer?",
             "options": [
-                "1987",
-                "1990",
-                "1995",
-                "2000"
+                "Random Access Memory",
+                "Read-Only Memory",
+                "Memory Card",
+                "Storage Drive"
             ],
-            "correct_answer": "1987"
+            "correct_answer": "Random Access Memory"
         }
     ]
 }

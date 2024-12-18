@@ -10,11 +10,11 @@
 }
 
 .car.left {
-  left: 25%; /* Adjusted position for left lane */
+  left: 27%; /* Adjusted position for left lane */
 }
 
 .car.right {
-  left: 80%; /* Adjusted position for right lane */
+  left: 82%; /* Adjusted position for right lane */
 }
 
 .car-image {

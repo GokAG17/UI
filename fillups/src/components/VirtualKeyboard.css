@@ -1,0 +1,58 @@
+.virtual-keyboard {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .keyboard-keys {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-gap: 10px;
+  }
+  
+  .key {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+  
+  .key:hover {
+    background-color: #ddd;
+  }
+  
+  .key.active {
+    background-color: #007bff; /* Blue background for active key */
+    color: white;
+    transform: scale(1.1); /* Slight scaling effect to show focus */
+    transition: transform 0.2s ease;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .key:active {
+    transform: scale(0.95); /* Slight shrinking when clicked */
+  }
+  

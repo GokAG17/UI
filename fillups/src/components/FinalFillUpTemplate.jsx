@@ -1,16 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import VirtualKeyboard from "./VirtualKeyboard";
 import "./FinalTemplate.css";
 
 const FinalFillUpTemplate = () => {
   const { state } = useLocation();
-  const { topic, difficulty, numQuestions, color, size, boxColor } =
-    state || {};
+  const { topic, difficulty, numQuestions } = state || {};
+
   const [fillUpData, setFillUpData] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [feedback, setFeedback] = useState("");
   const [userAnswer, setUserAnswer] = useState("");
   const [loading, setLoading] = useState(true);
+
+  const [questionBoxColor, setQuestionBoxColor] = useState("#ffffff");
+  const [inputBoxColor, setInputBoxColor] = useState("#f0f0f0");
+  const [fontColor, setFontColor] = useState("#000000");
+  const [fontSize, setFontSize] = useState("16px");
+  const [buttonColor, setButtonColor] = useState("#007bff");
+  const [buttonFontColor, setButtonFontColor] = useState("#ffffff");
 
   const inputRef = useRef(null);
   const navigate = useNavigate();
@@ -35,8 +43,27 @@ const FinalFillUpTemplate = () => {
     }
   };
 
+  const fetchStylingValues = async () => {
+    try {
+      const response = await fetch("/styling.json");
+      if (!response.ok) {
+        throw new Error("Failed to load styling values");
+      }
+      const data = await response.json();
+      setQuestionBoxColor(data.questionBoxColor);
+      setInputBoxColor(data.inputBoxColor || "#ffffff");
+      setFontColor(data.fontColor);
+      setFontSize(data.fontSize);
+      setButtonColor(data.buttonColor || "#007bff");
+      setButtonFontColor(data.buttonFontColor || "#ffffff");
+    } catch (error) {
+      console.error("Error fetching styling values:", error);
+    }
+  };
+
   useEffect(() => {
     fetchFillUps();
+    fetchStylingValues();
   }, []);
 
   useEffect(() => {
@@ -55,6 +82,10 @@ const FinalFillUpTemplate = () => {
     } else {
       setFeedback(`Incorrect! The correct answer is: ${currentFillUp.answer}`);
     }
+
+    setTimeout(() => {
+      handleNextQuestion();
+    }, 5000);
   };
 
   const handleNextQuestion = () => {
@@ -63,7 +94,17 @@ const FinalFillUpTemplate = () => {
       setFeedback("");
       setUserAnswer("");
     } else {
-      navigate("/end"); // Adjust the path to your end page route
+      navigate("/end");
+    }
+  };
+
+  const handleKeyPress = (key) => {
+    if (key === "BACKSPACE") {
+      setUserAnswer((prevAnswer) => prevAnswer.slice(0, -1));
+    } else if (key === "ENTER") {
+      handleAnswerSubmit();
+    } else {
+      setUserAnswer((prevAnswer) => prevAnswer + key);
     }
   };
 
@@ -75,8 +116,17 @@ const FinalFillUpTemplate = () => {
 
   return (
     <div className="quiz-container">
-      <h1 className="quiz-title">Fill in the Blanks</h1>
-      <div className="question-box" style={{ backgroundColor: boxColor }}>
+      <VirtualKeyboard onKeyPress={handleKeyPress} />
+
+      <h1 className="quiz-title">Fill Ups</h1>
+      <div
+        className="question-box"
+        style={{
+          backgroundColor: questionBoxColor,
+          color: fontColor,
+          fontSize: fontSize,
+        }}
+      >
         <p className="question-text">{currentFillUp.question}</p>
         <input
           ref={inputRef}
@@ -85,11 +135,20 @@ const FinalFillUpTemplate = () => {
           onChange={(e) => setUserAnswer(e.target.value)}
           placeholder="Your answer"
           className="answer-input"
+          style={{
+            backgroundColor: inputBoxColor,
+            color: fontColor,
+            fontSize: fontSize,
+          }}
         />
         <button
           onClick={handleAnswerSubmit}
           className={`submit-button ${!userAnswer ? "disabled" : ""}`}
           disabled={!userAnswer}
+          style={{
+            backgroundColor: buttonColor,
+            color: buttonFontColor,
+          }}
         >
           Submit
         </button>
@@ -103,7 +162,14 @@ const FinalFillUpTemplate = () => {
           >
             {feedback}
           </p>
-          <button className="next-button" onClick={handleNextQuestion}>
+          <button
+            className="next-button"
+            onClick={handleNextQuestion}
+            style={{
+              backgroundColor: buttonColor,
+              color: buttonFontColor,
+            }}
+          >
             {currentQuestionIndex < fillUpData.length - 1 ? "Next" : "Finish"}
           </button>
         </div>

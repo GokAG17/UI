@@ -11,6 +11,7 @@ const RacingGameWithLearning = () => {
   const [currentFlashcard, setCurrentFlashcard] = useState(null);
   const [isGamePaused, setIsGamePaused] = useState(false);
   const [flashcards, setFlashcards] = useState([]); // State for storing flashcards
+  const [flashcardTimer, setFlashcardTimer] = useState(null); // Timer state
 
   useEffect(() => {
     const fetchFlashcards = async () => {
@@ -27,7 +28,14 @@ const RacingGameWithLearning = () => {
     };
 
     fetchFlashcards();
-  }, []);
+
+    // Cleanup timeout if component is unmounted
+    return () => {
+      if (flashcardTimer) {
+        clearTimeout(flashcardTimer);
+      }
+    };
+  }, [flashcardTimer]);
 
   const handleClick = () => {
     if (!isGamePaused) {
@@ -48,12 +56,21 @@ const RacingGameWithLearning = () => {
       setCurrentFlashcard(randomCard);
       setFlashcardVisible(true); // Show flashcard on missed coin
       setIsGamePaused(true); // Pause the game when the flashcard appears
+
+      // Set timer to close flashcard after 7 seconds
+      const timer = setTimeout(() => {
+        handleFlashcardCompletion();
+      }, 7000); // 7000 milliseconds = 7 seconds
+      setFlashcardTimer(timer); // Store the timer ID
     }
   };
 
   const handleFlashcardCompletion = () => {
     setFlashcardVisible(false);
     setIsGamePaused(false); // Resume the game after flashcard is completed
+    if (flashcardTimer) {
+      clearTimeout(flashcardTimer); // Clear the timer if the user manually completes the flashcard
+    }
   };
 
   return (

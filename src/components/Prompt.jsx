@@ -14,6 +14,7 @@ import Questionnaire1 from "./template/Quiz/Questionnaire1.jsx";
 import QuestionSet from "./template/Flashcard/QuestionSet.jsx";
 import TemplateEditor from "./template/Quiz/Editor.jsx";
 import TemplateEditor1 from "./template/Quiz/Editor1.jsx";
+import TemplateEditor2 from "./template/Flashcard/Editor1.jsx";
 import Setup from "./template/Math/Setup.jsx";
 import "./Prompt.css";
 
@@ -26,10 +27,15 @@ const Prompt = () => {
   const [showQuestionnaire, setShowQuestionnaire] = useState(false);
   const [startClicked, setStartClicked] = useState(false);
   const [templateData, setTemplateData] = useState(null);
+  const [templateData1, setTemplateData1] = useState(null);
+  const [templateData2, setTemplateData2] = useState(null);
   const [isTemplateEditorVisible, setIsTemplateEditorVisible] = useState(false);
+  const [isTemplateEditorVisibleFill, setIsTemplateEditorVisibleFill] = useState(false);
+  const [isTemplateEditorVisibleFlash, setIsTemplateEditorVisibleFlash] = useState(false);
   const [DataMath, setDataMath] = useState(null);
   const [DataMCQ, setDataMCQ] = useState(null);
   const [DataFill, setDataFill] = useState(null);
+  const [DataFlash, setDataFlash] = useState(null);
 
   useEffect(() => {
     console.log("Prompt component mounted. Current ID:", id);
@@ -37,23 +43,21 @@ const Prompt = () => {
 
   const handleNavigation = () => {
     setgenLoading(true);
-  
+
     setTimeout(() => {
       if (id === "2" && selectedTemplate === "1") {
-        window.open("http://localhost:3000", "_blank"); 
+        window.open("http://localhost:3000", "_blank");
       } else if (id === "1" && selectedTemplate === "1") {
-        window.open("http://localhost:3001", "_blank"); 
+        window.open("http://localhost:3001", "_blank");
       } else if (id === "1" && selectedTemplate === "2") {
-        window.open("http://localhost:3002", "_blank"); 
+        window.open("http://localhost:3002", "_blank");
       } else if (id === "3" && selectedTemplate === "1") {
         window.open("http://localhost:3003", "_blank");
       }
-  
+
       setgenLoading(false);
     }, 3000);
   };
-  
-  
 
   const renderTemplate = () => {
     if (id === "2" && selectedTemplate === "1") {
@@ -148,16 +152,83 @@ const Prompt = () => {
     setStartClicked(false);
   };
 
+  const handleDataFlash = (data) => {
+    setDataFlash(data);
+    console.log("Received setup data:", data);
+    setShowQuestionnaire(false);
+    setStartClicked(false);
+  };
+
   const handleEditTemplate = async (data) => {
     setgenLoading(true);
     setTemplateData(data);
     setIsTemplateEditorVisible(false);
     console.log("Edited template data:", data);
-    
+
     try {
       console.log("Edited template data:", data);
 
       const response = await fetch("http://127.0.0.1:5000/update-mcq-css", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error("Error generating MCQ questions:", error);
+    } finally {
+      setgenLoading(false);
+    }
+  };
+
+  const handleEditTemplateFill = async (data) => {
+    setgenLoading(true);
+    setTemplateData1(data);
+    setIsTemplateEditorVisibleFill(false);
+    console.log("Edited template data:", data);
+
+    try {
+      console.log("Edited template data:", data);
+
+      const response = await fetch("http://127.0.0.1:5000/update-fill-css", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error("Error generating MCQ questions:", error);
+    } finally {
+      setgenLoading(false);
+    }
+  };
+
+  const handleEditTemplateFlash = async (data) => {
+    setgenLoading(true);
+    setTemplateData2(data);
+    setIsTemplateEditorVisibleFlash(false);
+    console.log("Edited template data:", data);
+
+    try {
+      console.log("Edited template data:", data);
+
+      const response = await fetch("http://127.0.0.1:5000/update-flash-css", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -199,6 +270,32 @@ const Prompt = () => {
       console.log("Generated MCQ Questions:", result);
     } catch (error) {
       console.error("Error generating MCQ questions:", error);
+    } finally {
+      setgenLoading(false);
+    }
+  };
+
+  const handleGenerateFlash = async () => {
+    setgenLoading(true);
+    try {
+      console.log("DataFlash:", DataFlash); // Your MCQ data if needed
+
+      const response = await fetch("http://127.0.0.1:5000/generate-flashcards", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(DataFlash), // Send any necessary data if needed
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log("Generated Flashcard Questions:", result);
+    } catch (error) {
+      console.error("Error generating Flashcard questions:", error);
     } finally {
       setgenLoading(false);
     }
@@ -306,7 +403,19 @@ const Prompt = () => {
               shape="circle"
               icon={<FontAwesomeIcon icon={faEdit} />}
               className="edit-template-button"
-              onClick={() => setIsTemplateEditorVisible(true)}
+              onClick={() => setIsTemplateEditorVisibleFill(true)}
+              style={{ marginLeft: "10px" }}
+            />
+          </Tooltip>
+        )}
+        {id === "3" && selectedTemplate === "1" && (
+          <Tooltip title="Edit" overlayStyle={{ fontSize: "20px" }}>
+            <Button
+              type="primary"
+              shape="circle"
+              icon={<FontAwesomeIcon icon={faEdit} />}
+              className="edit-template-button"
+              onClick={() => setIsTemplateEditorVisibleFlash(true)}
               style={{ marginLeft: "10px" }}
             />
           </Tooltip>
@@ -371,6 +480,26 @@ const Prompt = () => {
         <TemplateEditor onTemplateEdit={handleEditTemplate} />
       </Modal>
 
+      <Modal
+        open={isTemplateEditorVisibleFill}
+        onCancel={() => setIsTemplateEditorVisibleFill(false)}
+        footer={null}
+        className="custom-modal"
+        centered
+      >
+        <TemplateEditor1 onTemplateEdit={handleEditTemplateFill} />
+      </Modal>
+
+      <Modal
+        open={isTemplateEditorVisibleFlash}
+        onCancel={() => setIsTemplateEditorVisibleFlash(false)}
+        footer={null}
+        className="custom-modal"
+        centered
+      >
+        <TemplateEditor2 onTemplateEdit={handleEditTemplateFlash} />
+      </Modal>
+
       {!showPreview && !loading && !startClicked && (
         <Button
           className="start1-button"
@@ -430,6 +559,21 @@ const Prompt = () => {
           </Button>
         )}
 
+      {!showPreview &&
+        !loading &&
+        !startClicked &&
+        DataFlash !== null &&
+        id === "3" &&
+        selectedTemplate === "1" && (
+          <Button
+            className="generate-button"
+            onClick={handleGenerateFlash}
+            style={{ marginTop: "20px" }}
+          >
+            Generate
+          </Button>
+        )}
+
       {!showPreview && !loading && startClicked && showQuestionnaire && (
         <div className="questionnaire-container">
           {id === "1" && selectedTemplate === "1" ? (
@@ -439,7 +583,7 @@ const Prompt = () => {
           ) : id === "2" && selectedTemplate === "1" ? (
             <Setup onDataReceived={handleDataMath} />
           ) : id === "3" && selectedTemplate === "1" ? (
-            <QuestionSet onDataReceived={handleDataMath} />
+            <QuestionSet handleSubmitAll={handleDataFlash} />
           ) : null}
         </div>
       )}

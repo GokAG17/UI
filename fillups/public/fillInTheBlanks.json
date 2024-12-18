@@ -1,24 +1,32 @@
 {
     "questions": [
         {
-            "question": "Artificial Intelligence (AI) is a type of ______________ that allows computers to think and learn like humans.",
-            "answer": "machine learning"
+            "question": "Anna University was established in the year ___________",
+            "answer": "1978"
         },
         {
-            "question": "AI can be used for various tasks such as ______________, healthcare, and education.",
-            "answer": "applications"
+            "question": "The main campus of Anna University is located at Thiagu Dr Perunthura, ___________",
+            "answer": "Chennai"
         },
         {
-            "question": "The development of AI has the potential to revolutionize many fields including ______________ and transportation.",
-            "answer": "transportation"
+            "question": "Anna University has a number of constituent colleges spread across Tamil Nadu and Puducherry, with the largest number of campuses in the city of ___________",
+            "answer": "Chennai"
         },
         {
-            "question": "AI systems often rely on large amounts of ______________ data to improve their performance.",
-            "answer": "datasets"
+            "question": "The Anna University is known for its strong research and development programs, with many of its faculty members having received awards from ___________",
+            "answer": "the Government of India"
         },
         {
-            "question": "One of the benefits of AI is that it can help automate ______________ tasks, freeing up time for humans to focus on more creative work.",
-            "answer": "repetitive"
+            "question": "Anna University has a number of collaborations with top universities in the world, including ___________",
+            "answer": "University of Cambridge"
+        },
+        {
+            "question": "The Anna University has produced several notable alumni who have gone on to become prominent figures in the fields of ___________",
+            "answer": "Technology and Engineering"
+        },
+        {
+            "question": "Anna University is ranked among the top universities in India by various ranking agencies, including the ___________",
+            "answer": "NIRF"
         }
     ]
 }

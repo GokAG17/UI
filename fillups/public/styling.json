@@ -1,8 +1,8 @@
 {
-    "questionBoxColor": "#be6060",
+    "questionBoxColor": "#fdf0f0",
     "questionBoxSize": "20px",
     "optionBoxColor": "#f0f0f0",
     "optionBoxSize": "10px",
-    "fontColor": "#f0f0f0",
-    "fontSize": "16px"
+    "fontColor": "#0447fd",
+    "fontSize": "15px"
 }

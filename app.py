@@ -11,6 +11,9 @@ fillin_json_path = os.path.join("fillups", "public", "fillinTheBlanks.json")
 maths_json_path = os.path.join("maths", "public", "questions.json")
 mcq_json_path = os.path.join("quiz", "public", "mcqData.json")
 styling_json_path = os.path.join("quiz", "public", "styling.json")
+styling_json_path1 = os.path.join("fillups", "public", "styling.json")
+styling_json_path2 = os.path.join("flashcard", "public", "styling.json")
+flashcard_json_path = os.path.join("flashcard", "public", "flashcards.json")
 
 llm = Ollama(model="llama3.2")
 
@@ -22,6 +25,32 @@ def update_mcq():
     
     try:
         with open(styling_json_path, "w") as file:
+            json.dump(data, file, indent=4)
+        return {"message": "Styling updated successfully"}, 200
+    except Exception as e:
+        print(f"Error writing to styling.json: {e}")
+        return {"message": "Error updating styling"}, 500
+    
+@app.route("/update-fill-css", methods=["POST"])
+def update_fill():
+    data=request.get_json()
+    print(data)
+    
+    try:
+        with open(styling_json_path1, "w") as file:
+            json.dump(data, file, indent=4)
+        return {"message": "Styling updated successfully"}, 200
+    except Exception as e:
+        print(f"Error writing to styling.json: {e}")
+        return {"message": "Error updating styling"}, 500
+    
+@app.route("/update-flash-css", methods=["POST"])
+def update_flash():
+    data=request.get_json()
+    print(data)
+    
+    try:
+        with open(styling_json_path2, "w") as file:
             json.dump(data, file, indent=4)
         return {"message": "Styling updated successfully"}, 200
     except Exception as e:
@@ -193,6 +222,67 @@ def generate_math():
         json.dump({"questions": questions['questions']}, json_file, indent=4)
 
     return jsonify({"questions": questions['questions']})
+
+
+def generate_flashcards_from_llm(prompt):
+    try:
+        response = llm.invoke(prompt)
+        return response
+    except Exception as e:
+        print(f"Error generating flashcards: {e}")
+        return None
+
+# Function to save data to a JSON file
+def save_to_file(path, data):
+    try:
+        with open(path, "w") as file:
+            json.dump(data, file, indent=4)
+    except Exception as e:
+        print(f"Error writing to {path}: {e}")
+        raise e
+
+# Route to generate flashcards
+@app.route("/generate-flashcards", methods=["POST"])
+def generate_flashcards():
+    data = request.get_json()
+
+    # Extract parameters
+    topic = data.get('Topic:')
+    level = data.get('Level:')
+    num_flashcards = int(data.get('Number of Questions:'))
+
+    # LLM prompt for flashcards
+    prompt = (
+        f"Generate {num_flashcards} flashcards about {topic} at a {level} level. "
+        "Each flashcard should be a JSON object with a 'question' and an 'answer'. "
+        "Format the response as a JSON array like this: "
+        "[{\"question\": \"What is 2 + 2?\", \"answer\": \"The answer is 4.\"}, "
+        "{\"question\": \"What is the capital of France?\", \"answer\": \"The capital is Paris.\"}, ...]. "
+        "Provide only the JSON array as the final output."
+    )
+
+    # Generate flashcards using the LLM
+    generated_output = generate_flashcards_from_llm(prompt)
+
+    print("Raw output from the model:", generated_output)
+
+    # Handle errors or invalid output
+    if generated_output is None:
+        return jsonify({"error": "Failed to generate flashcards."}), 500
+
+    try:
+        flashcards = json.loads(generated_output)
+    except json.JSONDecodeError as e:
+        return jsonify({"error": f"Error parsing the response: {str(e)}"}), 500
+
+    # Save the generated flashcards to a JSON file
+    try:
+        save_to_file(flashcard_json_path, flashcards)
+    except Exception as e:
+        return jsonify({"error": f"Error saving flashcards: {str(e)}"}), 500
+
+    return jsonify({"flashcards": flashcards}), 200
+
 
 if __name__ == "__main__":
     app.run(debug=True)
